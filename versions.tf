@@ -1,8 +1,8 @@
 terraform {
-  required_version = ">= 0.13"
   required_providers {
-    aci = {
-      source = "ciscodevnet/aci"
+    intersight = {
+      source = "CiscoDevNet/intersight"
+      version = "1.0.7"
     }
   }
 }
