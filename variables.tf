@@ -1,11 +1,11 @@
-variable "api_key" {
+variable "apikey" {
   type = string
   description = "API Key Id from Intersight"
   default = ""
 
 }
 
-variable "secret_key" {
+variable "secretkey" {
   type = string
   description = "API Key Id from Intersight"
   default = ""
