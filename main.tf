@@ -7,7 +7,7 @@ provider "intersight" {
 module "terraform-intersight-iks" {
   source = "terraform-cisco-modules/iks/intersight//"
   # Infra Config Policy Information
-  cluster_name = "test0920"
+  cluster_name = "IKS-ACI-TFC"
   # cluster_action   = "Deploy"
   vc_target_name   = "192.168.31.2"
   vc_portgroup     = ["MGMT-30"]
@@ -17,19 +17,19 @@ module "terraform-intersight-iks" {
   vc_password      = var.vc_password
 
   # IP Pool Information
-  ip_starting_address = "10.139.120.220"
-  ip_pool_size        = "20"
+  ip_starting_address = "172.30.232.10"
+  ip_pool_size        = "90"
   ip_netmask          = "255.255.255.0"
-  ip_gateway          = "10.139.120.1"
-  ip_primary_dns      = "10.101.128.15"
-  ip_secondary_dns    = "10.101.128.16"
+  ip_gateway          = "172.30.232.1"
+  ip_primary_dns      = "172.30.101.191"
+  ip_secondary_dns    = "192.168.28.10"
 
   # Network Configuration Settings
   # pod_cidr = "100.65.0.0/16"
   # service_cidr = "100.64.0.0/24"
   # cni = "Calico"
-  domain_name         = "rich.ciscolabs.com"
-  timezone            = "America/New_York"
+  domain_name         = "ebc.iseslab.cisco.com"
+  timezone            = "Asia/Jerusalem"
   unsigned_registries = ["10.101.128.128"]
   # root_ca_registries  = [""]
 
