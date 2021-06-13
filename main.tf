@@ -7,7 +7,7 @@ provider "intersight" {
 module "terraform-intersight-iks" {
   source = "terraform-cisco-modules/iks/intersight//"
   # Infra Config Policy Information
-  cluster_name = "IKS-ACI-TFC"
+  cluster_name = "IKS-ACI-TFC-2"
   # cluster_action   = "Deploy"
   vc_target_name   = "192.168.31.2"
   vc_portgroup     = ["MGMT-30"]
