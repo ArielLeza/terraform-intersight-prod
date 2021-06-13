@@ -7,7 +7,7 @@ provider "intersight" {
 module "terraform-intersight-iks" {
   source = "terraform-cisco-modules/iks/intersight//"
   # Infra Config Policy Information
-  cluster_name = "IKS-ACI-TFC-2"
+  cluster_name = "IKS-EBC-Prod-TFC"
   # cluster_action   = "Deploy"
   vc_target_name   = "192.168.31.2"
   vc_portgroup     = ["MGMT-30"]
@@ -23,6 +23,7 @@ module "terraform-intersight-iks" {
   ip_gateway          = "172.30.232.1"
   ip_primary_dns      = "172.30.101.191"
   ip_secondary_dns    = "192.168.28.10"
+  ip_primary_ntp      = "192.168.30.1"
 
   # Network Configuration Settings
   # pod_cidr = "100.65.0.0/16"
