@@ -1,19 +1,16 @@
-# Required Varilables
-api_key      = ""
-secretkey    = ""
-endpoint     = "https://www.intersight.com"
-vc_password  = ""
-ssh_user     = "iksadmin"
-ssh_key      = ""
-# Optional Variables
+apikey       = ""
+secretkey    = "../../.secret"
+organization = "default"
+ssh_user = "iksadmin"
+ssh_key  = ""
 tags = [
   {
-    "key" : "Provisioned"
-    "value" : "TFC"
+    "key" : "managed_by"
+    "value" : "Terraform"
   },
   {
-    "key" : "Owner"
-    "value" : "Ariel"
+    "key" : "owner"
+    "value" : "jb"
   }
 ]
 organization = "default" # Change this if a different org is required.  Default org is set to "default"
