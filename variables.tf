@@ -1,10 +1,14 @@
 variable "apikey" {
   type        = string
   description = "API Key"
+  default     = ""
+
 }
 variable "secretkey" {
   type        = string
   description = "Secret Key or file location"
+  default     = ""
+
 }
 variable "endpoint" {
   type        = string
