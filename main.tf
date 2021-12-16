@@ -93,7 +93,7 @@ module "terraform-intersight-iks" {
     policyName   = "IKS-EBC-Prod-TFC-InfraConfPol"
     # description  = "Test Policy"
      interfaces   = ["EBC-Cloud-Anywhere-Prod|IKS_APP|Nodes_EPG"]
-    vcTargetName   = "LAB-EBC"
+    vcTargetName   = "192.168.31.2"
     # vcClusterName      = optional(string)
     vcDatastoreName     = "VMDATA-EBC"
     # vcResourcePoolName = optional(string)
