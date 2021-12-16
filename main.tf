@@ -111,7 +111,7 @@ module "terraform-intersight-iks" {
     installStrategy  = "InstallOnly"
     releaseVersion = "1.8.1-cisco2-helm3"
     overrides = yamlencode({"demoApplication":{"enabled":true}})
-    }
+  }
     # {
     # createNew = true
     # addonName            = "ccp-monitor"
