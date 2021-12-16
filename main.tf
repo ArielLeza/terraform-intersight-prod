@@ -106,7 +106,7 @@ module "terraform-intersight-iks" {
     {
     createNew = true
     addonPolicyName = "IKS-EBC-Prod-TFC-AddonPol"
-    addonName            = "smm"
+    addonName            = "ServiceMeshManager_Addon"
     description       = "SMM Policy"
     upgradeStrategy  = "AlwaysReinstall"
     installStrategy  = "InstallOnly"
