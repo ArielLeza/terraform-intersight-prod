@@ -88,7 +88,7 @@ module "terraform-intersight-iks" {
 # Infrastructure Configuration Policy (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
   infraConfigPolicy = {
     use_existing = false
-    platformType = "esxi"
+    platformType = "vcenter"
     targetName   = "LAB-EBC"
     policyName   = "IKS-EBC-Prod-TFC-InfraConfPol"
     # description  = "Test Policy"
