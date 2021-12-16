@@ -25,13 +25,13 @@ module "terraform-intersight-iks" {
 
 # IP Pool Information (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
   ip_pool = {
-    use_existing        = true
-    name                = "IKS-EBC-Prod-TFC-ip-pool"
-    # ip_starting_address = "10.239.21.220"
-    # ip_pool_size        = "20"
-    # ip_netmask          = "255.255.255.0"
-    # ip_gateway          = "10.239.21.1"
-    # dns_servers         = ["10.101.128.15","10.101.128.16"]
+    use_existing        = false
+    name                = "IKS-EBC-Prod-TFC-IpPoolPol"
+    ip_starting_address = "172.24.232.101"
+    ip_pool_size        = "20"
+    ip_netmask          = "255.255.255.0"
+    ip_gateway          = "172.24.232.1"
+    dns_servers         = ["172.30.101.191","192.168.28.10","192.168.28.11"]
   }
 
 # Sysconfig Policy (UI Reference NODE OS Configuration) (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
@@ -39,7 +39,7 @@ module "terraform-intersight-iks" {
     use_existing = false
     name         = "IKS-EBC-Prod-TFC-SysconfigPol"
      domain_name  = "ebc.iseslab.cisco.com"
-     timezone     = "UTC"
+     #timezone     = "UTC"
      ntp_servers  = ["172.30.101.191","192.168.28.10","192.168.28.11"]
      dns_servers  = ["172.30.101.191","192.168.28.10","192.168.28.11"]
   }
@@ -88,12 +88,12 @@ module "terraform-intersight-iks" {
 # Infrastructure Configuration Policy (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
   infraConfigPolicy = {
     use_existing = false
-    platformType = "vcenter"
+    platformType = "esxi"
     targetName   = "LAB-EBC"
     policyName   = "IKS-EBC-Prod-TFC-InfraConfPol"
     # description  = "Test Policy"
      interfaces   = ["EBC-Cloud-Anywhere-Prod|IKS_APP|Nodes_EPG"]
-    # vcTargetName   = optional(string)
+    vcTargetName   = "LAB-EBC"
     # vcClusterName      = optional(string)
     vcDatastoreName     = "VMDATA-EBC"
     # vcResourcePoolName = optional(string)
@@ -110,7 +110,7 @@ module "terraform-intersight-iks" {
     description       = "SMM Policy"
     upgradeStrategy  = "AlwaysReinstall"
     installStrategy  = "InstallOnly"
-    releaseVersion = "1.7.4-cisco4-helm3"
+    releaseVersion = "1.8.1-cisco2-helm3"
     overrides = yamlencode({"demoApplication":{"enabled":true}})
     },
     # {
