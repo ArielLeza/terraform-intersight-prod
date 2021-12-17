@@ -110,7 +110,7 @@ module "terraform-intersight-iks" {
   description       = "SMM Policy"
   upgradeStrategy  = "AlwaysReinstall"
   installStrategy  = "InstallOnly"
-  releaseVersion = "1.7.4-cisco4-helm3"
+  releaseVersion = "1.8.1-cisco2-helm3"
   overrides = yamlencode({"demoApplication":{"enabled":true}})
   },
   # {
