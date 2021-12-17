@@ -86,19 +86,19 @@ module "terraform-intersight-iks" {
   }
 
 # Infrastructure Configuration Policy (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
-  infraConfigPolicy = {
-    use_existing = false
-    platformType = "VmwareVcenter"
-    targetName   = "192.168.31.2"
-    policyName   = "IKS-EBC-Prod-TFC-InfraConfPol"
+  #infraConfigPolicy = {
+    use_existing = true
+  #  platformType = "VmwareVcenter"
+#    targetName   = "192.168.31.2"
+    policyName   = "iks-ebs-infra-policy"
     # description  = "Test Policy"
-    interfaces   = ["EBC-Cloud-Anywhere-Prod|IKS_APP|Nodes_EPG"]
-    vcTargetName   = "192.168.31.2"
-    vcClusterName      = "LAB-EBC"
-    vcDatastoreName     = "VMDATA-EBC"
+#    interfaces   = ["EBC-Cloud-Anywhere-Prod|IKS_APP|Nodes_EPG"]
+#    vcTargetName   = "192.168.31.2"
+#    vcClusterName      = "LAB-EBC"
+#    vcDatastoreName     = "VMDATA-EBC"
     # vcResourcePoolName = optional(string)
-    vcPassword      = var.vc_password
-  }
+#    vcPassword      = var.vc_password
+#  }
 
 # Addon Profile and Policies (To create new change "createNew" to 'true' and uncomment variables and modify them to meet your needs.)
 # This is an Optional item.  Comment or remove to not use.  Multiple addons can be configured.
