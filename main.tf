@@ -104,7 +104,7 @@ module "terraform-intersight-iks" {
 # This is an Optional item.  Comment or remove to not use.  Multiple addons can be configured.
   addons       = [
   {
-  createNew = true
+  createNew = false
   addonPolicyName = "smm-tf"
   addonName            = "smm"
   description       = "SMM Policy"
