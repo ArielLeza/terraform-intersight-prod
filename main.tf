@@ -86,7 +86,7 @@ module "terraform-intersight-iks" {
   }
 
 # Infrastructure Configuration Policy (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
-  #infraConfigPolicy = {
+  infraConfigPolicy = {
     use_existing = true
   #  platformType = "VmwareVcenter"
 #    targetName   = "192.168.31.2"
