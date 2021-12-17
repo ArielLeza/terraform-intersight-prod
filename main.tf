@@ -105,7 +105,7 @@ module "terraform-intersight-iks" {
   addons       = [
   {
   createNew = false
-  addonPolicyName = "smm-tf"
+  addonPolicyName = "iks-ebs-infra-policy"
   addonName            = "smm"
   description       = "SMM Policy"
   upgradeStrategy  = "AlwaysReinstall"
