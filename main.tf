@@ -98,7 +98,7 @@ module "terraform-intersight-iks" {
 #    vcDatastoreName     = "VMDATA-EBC"
     # vcResourcePoolName = optional(string)
 #    vcPassword      = var.vc_password
-#  }
+  }
 
 # Addon Profile and Policies (To create new change "createNew" to 'true' and uncomment variables and modify them to meet your needs.)
 # This is an Optional item.  Comment or remove to not use.  Multiple addons can be configured.
